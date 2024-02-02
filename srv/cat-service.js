@@ -5,6 +5,7 @@ const db = cds.connect.to('db');
 
 
 module.exports = cds.service.impl(srv => {
+      // console.log("hai");
         srv.before('READ','Books',capitalizename);
         //  srv.before('READ','Order_Items',capitalizeitem);
      });
