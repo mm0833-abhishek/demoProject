@@ -1,0 +1,53 @@
+GET http://localhost:4004/odata/v4/catalog/Classes
+###
+
+POST  http://localhost:4004/odata/v4/catalog/Classes
+    Content-Type: application/json
+
+    {
+      "ID": 3,
+      "location_Building": "5B third data",
+      "location_Floor": 14,
+      "emails": [
+        {
+          "kind": "new email",
+          "address": "abd@facebook.com"
+        },
+        {
+          "address": "xys@google.com"
+        }
+      ]
+    }
+###
+
+PUT  http://localhost:4004/odata/v4/catalog/Classes/2
+   Content-Type: application/json
+
+    {
+      "ID": 1,
+      "location_Building": "5B Updated data",
+      "location_Floor": 5,
+      "emails": [
+        {
+          "kind": "first updated",
+          "address": "abd@google.com"
+        },
+        {
+          "address": "xys@ad"
+        }
+      ]
+    }
+###
+
+
+PATCH   http://localhost:4004/odata/v4/catalog/Classes/2
+   Content-Type: application/json
+
+    {
+        "location_Building": "5C Patched data"
+    }
+###
+
+
+DELETE http://localhost:4004/odata/v4/catalog/Classes/2
+###
